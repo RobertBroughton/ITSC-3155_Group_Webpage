@@ -20,6 +20,8 @@ header {
     margin-top: 10px;
 }
 
+
+
 /* Menu button styling */
 header nav {
     margin-top: 10px;
@@ -87,4 +89,22 @@ button {
 
 button:hover {
     background: #0056b3;
+}
+
+.mood-board {
+    display: none;
+    margin-top: 1rem;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.mood-board img {
+    width: 80%;
+    height: auto;
+    border-radius: 12px;
+    transition: transform 0.3s ease;
+}
+
+.mood-board img:hover {
+    transform: scale(1.02);
 }
