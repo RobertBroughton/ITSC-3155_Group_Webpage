@@ -20,6 +20,8 @@ header {
     margin-top: 10px;
 }
 
+
+
 /* Menu button styling */
 header nav {
     margin-top: 10px;
@@ -90,14 +92,19 @@ button:hover {
 }
 
 .mood-board {
-    margin-top: 15px;
-    text-align: center;
+    display: none;
+    margin-top: 1rem;
+    border-radius: 12px;
+    overflow: hidden;
 }
 
 .mood-board img {
-    max-width: 200px;
+    width: 80%;
     height: auto;
-    border-radius: 8px;
-    display: block;
-    margin: 0 auto;
+    border-radius: 12px;
+    transition: transform 0.3s ease;
+}
+
+.mood-board img:hover {
+    transform: scale(1.02);
 }
