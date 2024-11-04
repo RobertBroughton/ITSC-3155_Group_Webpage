@@ -88,3 +88,16 @@ button {
 button:hover {
     background: #0056b3;
 }
+
+.mood-board {
+    margin-top: 15px;
+    text-align: center;
+}
+
+.mood-board img {
+    max-width: 200px;
+    height: auto;
+    border-radius: 8px;
+    display: block;
+    margin: 0 auto;
+}
