@@ -1,110 +1,223 @@
 /* General page styling */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    font-family: 'Poppins', Arial, sans-serif;
+    background: linear-gradient(135deg, #f5f7fa 0%, #e4e8ff 100%);
     margin: 0;
     padding: 0;
+    min-height: 100vh;
 }
 
 /* Header section styling */
 header {
-    background: #333;
+    background: linear-gradient(to right, #4a90e2, #7b64ff);
     color: #fff;
-    padding: 10px 0;
+    padding: 20px 0;
     text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 /* Styling for team logo image */
 .team-logo {
-    width: 150px; /* Adjust the size as needed */
-    margin-top: 10px;
+    width: 180px;
+    margin-top: 15px;
+    transition: transform 0.3s ease;
 }
 
-
+.team-logo:hover {
+    transform: scale(1.05);
+}
 
 /* Menu button styling */
 header nav {
-    margin-top: 10px;
+    margin: 20px 0;
 }
 
 header nav button {
-    background: #007BFF;
+    background: rgba(255, 255, 255, 0.15);
     color: white;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 5px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    padding: 12px 24px;
+    border-radius: 25px;
     cursor: pointer;
-    margin: 0 5px;
+    margin: 0 10px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 header nav button:hover {
-    background: #0056b3;
+    background: rgba(255, 255, 255, 0.25);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 /* Flex container for team bios and vision sections */
 .container {
-    width: 80%;
-    margin: 20px auto;
+    width: 90%;
+    max-width: 1400px;
+    margin: 40px auto;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 30px;
 }
 
 /* Card styling for individual team bios */
 .card {
     background: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    margin: 10px;
-    padding: 20px;
-    flex: 1 1 calc(30% - 40px);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    margin: 0;
+    padding: 30px;
+    flex: 1 1 300px;
+    max-width: 400px;
     text-align: center;
-    transition: transform 0.2s;
-}
-
-.card:hover {
-    transform: scale(1.05);
-}
-
-h2 {
-    margin: 0 0 10px;
-}
-
-/* Initially hide bio details */
-.bio {
-    display: none;
-    margin-top: 10px;
-    color: #555;
-}
-
-/* Button styling */
-button {
-    background: #007BFF;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-button:hover {
-    background: #0056b3;
-}
-
-.mood-board {
-    display: none;
-    margin-top: 1rem;
-    border-radius: 12px;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    position: relative;
     overflow: hidden;
 }
 
-.mood-board img {
-    width: 80%;
-    height: auto;
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(to right, #4a90e2, #7b64ff);
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+}
+
+.card h2 {
+    margin: 0 0 15px;
+    color: #2c3e50;
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+/* Bio text styling */
+.bio {
+    display: none;
+    margin-top: 20px;
+    color: #555;
+    line-height: 1.6;
+    padding: 15px;
+    background: #f8f9fa;
     border-radius: 12px;
+    font-size: 0.95rem;
+}
+
+/* Button styling */
+.card button {
+    background: linear-gradient(to right, #4a90e2, #7b64ff);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: 600;
+    margin-top: 15px;
+    transition: all 0.3s ease;
+}
+
+.card button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(74, 144, 226, 0.3);
+}
+
+/* Mood board styling */
+.mood-board {
+    display: none;
+    margin-top: 1.5rem;
+    border-radius: 15px;
+    overflow: hidden;
+    padding: 15px;
+    background: #f8f9fa;
+}
+
+.mood-board img {
+    width: 85%;
+    height: auto;
+    border-radius: 15px;
     transition: transform 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 .mood-board img:hover {
-    transform: scale(1.02);
+    transform: scale(1.05);
+}
+
+/* Mission Statement Section Styling */
+.vision-section {
+    background: linear-gradient(135deg, #4a90e2, #7b64ff);
+    border-radius: 20px;
+    padding: 40px;
+    color: white;
+    text-align: center;
+    margin: 40px auto;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+    max-width: 1000px;
+    position: relative;
+    overflow: hidden;
+}
+
+.vision-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 100%);
+    pointer-events: none;
+}
+
+.vision-title {
+    font-size: 2.5rem;
+    margin-bottom: 25px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+}
+
+.vision-text {
+    font-size: 1.3rem;
+    line-height: 1.8;
+    font-style: italic;
+    max-width: 800px;
+    margin: 0 auto;
+    opacity: 0.9;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+        padding: 10px;
+    }
+
+    .card {
+        flex: 1 1 100%;
+        margin: 10px 0;
+    }
+
+    .vision-section {
+        margin: 20px 10px;
+        padding: 20px;
+    }
+
+    .vision-title {
+        font-size: 2rem;
+    }
+
+    .vision-text {
+        font-size: 1.1rem;
+    }
 }
